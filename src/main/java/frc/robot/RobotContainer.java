@@ -67,12 +67,12 @@ public class RobotContainer {
    * joysticks}.
    */
 
-   private final SwerveSubsystem s_Swerve = new SwerveSubsystem();
+
 private void configureButtonBindings() {
     //new CommandXboxController(2).leftStick(swerveSubsystem.zeroHeading());
 
     //new JoystickButton(driverJoystick, 2).onTrue(new SwerveJoystickCmd(swerveSubsystem, null, null, null, null));
-    new JoystickButton(driverJoystick, 2).onTrue(new InstantCommand(() -> s_Swerve.zeroHeading()));
+    new JoystickButton(driverJoystick, 0).onTrue(new InstantCommand(() -> swerveSubsystem.zeroHeading()));
  
     //swerveSubsystem.zeroHeading(); coud go in instant as argument for InstantCommand (temporary fix?)
 }
